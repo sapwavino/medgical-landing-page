@@ -1,0 +1,11 @@
+{
+  "hosting": {
+    "public": "../landing-page-www/",
+    "site": "version-234",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
