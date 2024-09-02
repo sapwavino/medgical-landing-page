@@ -1,7 +1,5 @@
 # Medgical Landing Page
 
-## Branch: STATISTICS
+## Branch: FAQs UPDATED
 
-- This branch is for the statistics section
-- Moved statistics section to after testimonials
-- Added new stat
+- This branch is for the faqs section
