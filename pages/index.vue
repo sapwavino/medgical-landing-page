@@ -78,6 +78,7 @@
                 </div>
             </div>
         </div>
+        <key-points></key-points>
         <MedgicalStats />
         <div id="features" class="section-features relative">
             <div class="container px-5">
@@ -563,8 +564,11 @@
     </div>
 </template>
 <script>
+import KeyPoints from "../components/KeyPoints.vue";
+
 //import Sparks from '~/components/sparks.vue';
 export default defineNuxtComponent({
+  components: { KeyPoints },
     //components: {
     //    x
     //},

@@ -226,6 +226,10 @@ export default defineI18nConfig(() => ({
                 role: 'Médica Psiquiatra da Infância e Adolescência, Co-Fundadora',
             },
         },    
+        keyPoints: {
+            ordinalIndicator: "º",
+            first: "sistema em Portugal de notas medicas por IA"
+        }
       },
       en: {
         hero1: 'Clinical records',
@@ -449,8 +453,11 @@ export default defineI18nConfig(() => ({
             hospital_license_point4: 'Audio transcription hours adapted to the size of your clinic or hospital',
             hospital_license_point5: 'Dedicated support team by email and phone',
             hospital_license_point6: 'Quantity and commitment discounts',
+        },
+        keyPoints: {
+            ordinalIndicator: "st",
+            first: "medical notes system in Portugal using AI"
         }
-
       }
     }
   }))
