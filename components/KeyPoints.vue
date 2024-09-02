@@ -1,6 +1,6 @@
 <template>
   <div
-    class="container w-2/3 mx-auto mb-32 gradient-wrapper rounded-2xl px-5 py-10 text-center flex flex-col"
+    class="container w-2/3 mx-auto mb-24 gradient-wrapper rounded-2xl px-5 py-10 text-center flex flex-col"
   >
     <section class="h-36 w-full grid md:grid-cols-4 grid-cols-2 gap-y-10">
       <div>

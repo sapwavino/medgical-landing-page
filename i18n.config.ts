@@ -192,6 +192,7 @@ export default defineI18nConfig(() => ({
         patientsatisfaction: "satisfação de doentes e médicos",
         lesserrors: "qualidade dos documentos gerados",
         timetodocumentation: "tempo gasto a validar os documentos gerados*",
+        testStats: "médicos testaram a Medgical durante a fase experimental",
         footnote:
           "*80% das respostas a questionário de satisfação da Medgical indicam que os médicos gastam menos de 1 minuto a validar os documentos gerados com o nosso software"
       },
@@ -489,6 +490,7 @@ export default defineI18nConfig(() => ({
         patientsatisfaction: "patient and doctor satisfaction rating",
         lesserrors: "quality rating of generated documents",
         timetodocumentation: "time spent verifying the generated documents*",
+        testStats: "tester doctors tried Medgical during the experimental phase",
         footnote:
           "*80% of Medgical satisfaction survey responses indicate that doctors spend less than 1 minute documenting the consultation with our software"
       },

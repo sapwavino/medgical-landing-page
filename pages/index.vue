@@ -110,7 +110,7 @@
       </div>
     </div>
     <key-points></key-points>
-    <MedgicalStats />
+    
     <div id="features" class="section-features relative">
       <div class="container px-5">
         <div
@@ -714,6 +714,9 @@
         </div>
       </div>
     </div>
+
+    <MedgicalStats />
+    
     <MedgicalFaq />
     <MedgicalFooter />
   </div>
