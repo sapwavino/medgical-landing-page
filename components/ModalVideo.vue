@@ -11,13 +11,13 @@
           @click="closeAction"
           class="text-black top-5 flex items-center gap-2 justify-center text-sm font-semibold w-full right-5 py-2 bg-slate-50 rounded-lg hover:bg-slate-100"
         >
-          Fechar vídeo
+          {{ $t("closeVideo") }}
         </button>
         <button
-          @click="closeAction"
+          @click="openModalJoin"
           class="text-white/80 top-5 flex items-center gap-2 justify-center text-sm font-semibold w-full right-5 py-2 bg-slate-800 rounded-lg hover:bg-slate-700"
         >
-          Experimentar grátis
+          {{ $t("tryForFree") }}
         </button>
       </div>
     </div>
@@ -122,6 +122,11 @@ export default {
       if (e.key === "Escape") {
         this.closeAction();
       }
+    },
+    openModalJoin() {
+      this.$store.commit("changeVideoState", false);
+      this.$store.commit("changeModalState", true);
+      this.$store.commit("modalReason", "try");
     },
     open() {
       this.$refs.modal.open();
