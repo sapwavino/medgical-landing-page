@@ -15,7 +15,10 @@
         <div class=" transition-all ease-in-out overflow-hidden" :style="{
                 height: isOpen ? `${this.$refs.paragraph.scrollHeight}px` : '0px'
             }">
-            <p ref="paragraph" class="text-sm text-white/70 pb-2.5 pt-3">{{ answer }}</p>
+            <ul v-if="typeof answer === 'object'" ref="paragraph">
+                <li  class="text-sm text-white/70 pb-2.5 pt-3" v-for="(item, index) in answer" :key="index">{{ item }}</li>
+            </ul>
+            <p ref="paragraph" class="text-sm text-white/70 pb-2.5 pt-3" v-else>{{ answer }}</p>
         </div>
     </div>
 </template>
@@ -31,7 +34,7 @@ export default {
             required: true
         },
         answer: {
-            type: String,
+            type: String || Object,
             required: true
         },
         showBottomBorder: {

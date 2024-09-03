@@ -184,7 +184,9 @@ export default defineI18nConfig(() => ({
         q10: "Existem limitações de volume de dados ou número de usuários para a Medgical?",
         a10: "A Medgical é projetada para escalar e suportar práticas de qualquer tamanho, desde consultórios individuais até grandes hospitais, sem limites no volume de dados ou número de usuários. Isso garante que a nossa plataforma possa crescer e adaptar-se conforme as suas necessidades evoluem.",
         q11: "Como a Medgical lida com múltiplas línguas e dialetos?",
-        a11: "Nossa IA é treinada para reconhecer e processar múltiplas línguas e dialetos, permitindo que a Medgical seja utilizada em diversas regiões geográficas, facilitando a implementação em práticas multilingues."
+        a11: "Nossa IA é treinada para reconhecer e processar múltiplas línguas e dialetos, permitindo que a Medgical seja utilizada em diversas regiões geográficas, facilitando a implementação em práticas multilingues.",
+        q12: "Quais as especialidades disponíveis?",
+        
       },
       data: "DADOS",
       stats: {
@@ -483,14 +485,16 @@ export default defineI18nConfig(() => ({
         q10: "Are there any limitations on data volume or number of users for Medgical?",
         a10: "Medgical is designed to scale and support practices of any size, from individual practices to large hospitals, with no limits on data volume or number of users. This ensures that our platform can grow and adapt as your needs evolve.",
         q11: "How does Medgical handle multiple languages and dialects?",
-        a11: "Our AI is trained to recognize and process multiple languages and dialects, allowing Medgical to be used in various geographic regions, facilitating implementation in multilingual practices."
+        a11: "Our AI is trained to recognize and process multiple languages and dialects, allowing Medgical to be used in various geographic regions, facilitating implementation in multilingual practices.",
+        q12: "What medical specialities are available?"
       },
       stats: {
         timeusedindocumentation: "of daily bureaucratic work",
         patientsatisfaction: "patient and doctor satisfaction rating",
         lesserrors: "quality rating of generated documents",
         timetodocumentation: "time spent verifying the generated documents*",
-        testStats: "tester doctors tried Medgical during the experimental phase",
+        testStats:
+          "tester doctors tried Medgical during the experimental phase",
         footnote:
           "*80% of Medgical satisfaction survey responses indicate that doctors spend less than 1 minute documenting the consultation with our software"
       },
