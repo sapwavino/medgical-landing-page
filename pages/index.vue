@@ -1,10 +1,17 @@
 <template>
-  <div class="gradient-wrapper relative">
+  <div class="relative" id="mainWrapper" :class="
+  $store.state.theme === 'dark'
+    ? 'gradient-wrapper '
+    : ''
+">
     <div class="hover" style="opacity: 0"></div>
     <div
       class="glow-background opacity-0 xl:opacity-0 translate-y-24 h-[130vh] lg:h-[100vh]"
     ></div>
-    <div class="sparks-background opacity-90" style="z-index: 0"></div>
+    <div
+      class="bg-light-stars dark:bg-dark-stars sparks-background opacity-90"
+      style="z-index: 0"
+    ></div>
     <MedgicalHeader />
     <div class="section-hero">
       <div
@@ -13,7 +20,15 @@
         <div
           class="intro-block min-h-56 h-[50vh] lg:pt-0 items-center lg:items-start"
         >
-          <h1 class="display-1">{{ $t("hero1") }}<br />{{ $t("hero2") }}</h1>
+          <h1
+            :class="
+              $store.state.theme === 'dark'
+                ? 'display-1'
+                : 'text-medgicalDarkBlue display-11'
+            "
+          >
+            {{ $t("hero1") }}<br />{{ $t("hero2") }}
+          </h1>
           <p class="display-paragraph w-full max-w-md px-0 sm:px-10 md:px-0">
             {{ $t("herotext") }}
           </p>
@@ -45,7 +60,7 @@
 
           <div class="paralax1 absolute z-20 top-5 left-0">
             <div
-              class="bg-zinc-300 transition-all duration-1000 text-zinc-800 ring-white/5 rounded-3xl shadow-lg shadow-black/10 h-96 w-72 md:h-[26rem] md:w-[19rem] flex flex-col p-5"
+              class="bg-medgicalBlue text-white dark:bg-zinc-300 transition-all duration-1000 dark:text-zinc-800 ring-white/5 rounded-3xl shadow-lg shadow-black/10 h-96 w-72 md:h-[26rem] md:w-[19rem] flex flex-col p-5"
               :class="{
                 'opacity-0 translate-x-10 scale-110': !generated,
                 'opacity-100 translate-x-0 scale-100': generated,
@@ -85,6 +100,7 @@
                 </div>
 
                 <div
+                  v-if="$store.state.theme === 'dark'"
                   class="bg-gradient-to-t from-zinc-300 to-transparent h-10 absolute bottom-0 left-0 right-0"
                 ></div>
               </div>
@@ -110,7 +126,7 @@
       </div>
     </div>
     <key-points></key-points>
-    
+
     <div id="features" class="section-features relative">
       <div class="container px-5">
         <div
@@ -716,7 +732,7 @@
     </div>
 
     <MedgicalStats />
-    
+
     <MedgicalFaq />
     <MedgicalFooter />
   </div>
@@ -760,7 +776,7 @@ export default defineNuxtComponent({
     //change transcription value
     const hover = document.querySelector(".hover");
     const hoverWHalf = hover.offsetWidth / 2;
-    const container = document.querySelector(".gradient-wrapper");
+    const container = document.querySelector("#mainWrapper");
     const paralax = document.querySelector(".paralax");
     const asr = document.querySelector(".asr");
     const asr2 = document.querySelector(".paralax1");
@@ -964,6 +980,11 @@ export default defineNuxtComponent({
   watch: {
     $route(to, from) {
       this.goToSection();
+    },
+  },
+  computed: {
+    theme() {
+      return this.$store.state.theme;
     },
   },
 });

@@ -1,7 +1,8 @@
 # Medgical Landing Page
 
-## Branch: FAQs UPDATED
+## Branch: LANDING PAGE REDESIGN
 
-- This branch is for the faqs section
-- Added new faq for available specialties
-- Modified Question component to display array of answers as well as a string
+### TODO
+
+[ ] Redesign landing page with a lighter theme
+[ ] Create dark and light theme modes

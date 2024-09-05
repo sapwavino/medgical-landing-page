@@ -129,8 +129,9 @@ body {
   -ms-text-size-adjust: 100%;
   min-height: 100%;
   margin: 0;
-  color: #fff;
-  background-color: #1e1e21;
+  /* color: #fff; */
+  /* background-color: #1e1e21; */
+  @apply dark:text-gray-50 text-black 
 }
 
 .section-hero {
@@ -168,7 +169,17 @@ body {
   margin-bottom: 24px;
   line-height: 1.08;
   font-size: 60px;
-  @apply text-3xl sm:text-5xl md:text-6xl;
+  @apply text-4xl sm:text-5xl md:text-6xl;
+}
+
+.display-11 {
+  letter-spacing: -0.2px;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.07);
+  margin-top: 0;
+  margin-bottom: 24px;
+  line-height: 1.08;
+  font-size: 60px;
+  @apply text-4xl sm:text-5xl md:text-6xl;
 }
 
 .display-2 {
@@ -229,17 +240,17 @@ h6 {
 }
 
 .display-paragraph {
-  color: #bdbdc0;
+  /* color: #bdbdc0; */
   margin-bottom: 32px;
   font-weight: 500;
-  @apply text-sm sm:text-base md:text-xl sm:w-full;
+  @apply text-sm sm:text-base md:text-xl sm:w-full dark:text-gray-200 text-black;
 }
 
 .display-paragraph-2 {
-  color: #bdbdc0;
+  /* color: #bdbdc0; */
   margin-bottom: 32px;
   font-weight: 500;
-  @apply text-sm sm:text-base md:text-lg sm:w-full;
+  @apply text-sm sm:text-base md:text-lg sm:w-full dark:text-gray-200 text-black;
 }
 
 .button-primary-icon.disabled {
@@ -291,6 +302,11 @@ h6 {
   position: relative;
   overflow: hidden;
 }
+/* .gradient-wrapper-light {
+  background-image: url('~/assets/light_background_stars.png');
+  position: relative;
+  overflow: hidden;
+} */
 
 .bg-accent {
   background-color: #ff6b6b;
@@ -358,7 +374,7 @@ h6 {
 }
 
 .sparks-background {
-  background-image: url(~/assets/background_stars.png);
+  /* background-image: url(~/assets/background_stars.png); */
   background-position: 50%;
   background-size: 1090px;
   position: absolute;
@@ -370,13 +386,14 @@ h6 {
 }
 .card {
   min-height: 400px;
-  background-color: #1d1c20;
+  /* background-color: #1d1c20; */
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 24px;
   flex-direction: column;
   padding: 22px;
   position: relative;
   overflow: hidden;
+  @apply dark:bg-medgicalDarkerGrey bg-gray-300;
 }
 .card.nopadding {
   padding: 0 !important;
@@ -385,27 +402,28 @@ h6 {
   height: 230px;
   max-width: 630px;
   min-width: 630px;
-  background-color: #1d1c20;
+  /* background-color: #1d1c20; */
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 24px;
   padding: 22px;
   position: relative;
   overflow: hidden;
+  @apply dark:bg-medgicalDarkerGrey bg-gray-300;
 }
 .card-feedback-text {
-  @apply text-base font-medium text-white/70 leading-5;
+  @apply text-base font-medium   dark:text-black  dark:text-white/70 leading-5;
 }
 .feedback-name {
-  @apply text-lg font-semibold text-white/90;
+  @apply text-lg font-semibold text-black  dark:text-white/90;
 }
 .feedback-title {
-  @apply text-xs font-medium text-white/50;
+  @apply text-xs font-medium dark:text-white/50 text-black;
 }
 .card-title {
   @apply text-xl font-semibold mb-3;
 }
 .card-text {
-  @apply text-base font-medium text-white/70 leading-5;
+  @apply text-base font-medium text-black  dark:text-white/70 leading-5;
 }
 .grid-features {
   z-index: 2;
@@ -417,7 +435,7 @@ h6 {
 }
 
 footer a {
-  @apply text-base font-medium text-white/90 opacity-50 hover:opacity-90 cursor-pointer transition-all;
+  @apply text-base font-medium text-black  dark:text-white/90 opacity-50 hover:opacity-90 cursor-pointer transition-all;
 }
 
 a:hover {
@@ -428,22 +446,25 @@ nav a.logo {
   opacity: 0.95;
 }
 header a.nav {
-  color: #fff;
+  /* color: #fff; */
   opacity: 0.7;
+  @apply dark:text-gray-50 text-white
 }
 header a.nav:hover {
-  color: #fff;
+  /* color: #fff; */
   opacity: 1;
   transition: all 0.3s ease-in-out;
   text-decoration: none;
+  @apply dark:text-gray-50 text-black
 }
 nav a {
   font-size: 0.93rem;
   font-weight: 500;
-  color: #fff;
+  /* color: #fff; */
   text-decoration: none;
   opacity: 0.7;
   transition: all 0.3s ease-in-out;
+  @apply dark:text-gray-50 text-black
 }
 nav a:hover {
   opacity: 1;
@@ -575,7 +596,7 @@ nav a:hover {
 }
 
 .consultation-type {
-  @apply text-xs font-semibold shrink-0 w-32 h-16 flex flex-col justify-center items-center text-white/70 bg-white/5 rounded-lg px-3 py-2 text-center ring-1 ring-inset ring-white/10;
+  @apply text-xs font-semibold shrink-0 w-32 h-16 flex flex-col justify-center items-center text-black  dark:text-white/70 bg-white/5 rounded-lg px-3 py-2 text-center ring-1 ring-inset ring-white/10;
 }
 
 .glow-background {
@@ -592,7 +613,7 @@ nav a:hover {
 }
 
 .feature-list-pricing {
-  @apply leading-6 text-sm list-none mt-10 text-white/70 flex flex-col gap-2.5;
+  @apply leading-6 text-sm list-none mt-10  text-black  dark:text-white/70 flex flex-col gap-2.5;
 }
 
 .feature-list-pricing li {
@@ -841,7 +862,7 @@ nav a:hover {
 }
 
 .shredded-paper .alert {
-  @apply text-black/30 text-7xl font-semibold mt-28 ml-16;
+  @apply  text-white  dark:text-black/30 text-7xl font-semibold mt-28 ml-16;
 }
 
 @-webkit-keyframes shredGo {
@@ -1042,12 +1063,12 @@ nav a:hover {
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
   z-index: 12;
   text-align: center;
-  color: #fff;
-  @apply bg-zinc-600 rounded-3xl flex px-10 items-center;
+  /* color: #fff; */
+  @apply bg-zinc-600 rounded-3xl flex px-10 items-center dark:text-gray-50 text-black;
 }
 
 .submenu a {
-  @apply font-medium text-white/90 opacity-50 hover:opacity-90 cursor-pointer transition-all;
+  @apply font-medium text-black  dark:text-white/90 opacity-50 hover:opacity-90 cursor-pointer transition-all;
 }
 
 body.with-modal-open {
@@ -1055,11 +1076,11 @@ body.with-modal-open {
 }
 
 body {
-  @apply bg-black;
+  @apply dark:bg-black;
 }
 
 #__nuxt {
-  @apply bg-black transition-all overflow-y-auto overflow-x-hidden h-screen w-screen;
+  @apply transition-all overflow-y-auto overflow-x-hidden h-screen w-screen;
 }
 #__nuxt.animating-modal {
   @apply transform transition-all duration-500 ease-in-out;

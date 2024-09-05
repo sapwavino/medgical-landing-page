@@ -5,7 +5,8 @@ const store = createStore({
     return {
       modalOpen: false,
       videoOpen: false,
-      cta: 'contact'
+      cta: 'contact',
+      theme: 'light'
     };
   },
   mutations: {
@@ -17,6 +18,9 @@ const store = createStore({
     },
     modalReason(state, payload) {
       state.cta = payload;
+    },
+    changeTheme(state, payload) {
+      state.theme = payload;
     },
   },
 });
