@@ -1,6 +1,6 @@
 <template>
   <div
-    class="container w-2/3 mx-auto mb-24 dark:gradient-wrapper shadow-md rounded-3xl px-5 py-10 text-center flex flex-col"
+    class="container w-2/3 mx-auto mb-24 dark:gradient-wrapper shadow-md rounded-3xl px-5 py-10 text-center flex flex-col ubuntu-regular"
   >
     <section class="h-36 w-full grid md:grid-cols-4 grid-cols-2 gap-y-10 gap-x-1 text-white dark:text-gray-50">
       <div class="">
@@ -82,7 +82,6 @@
             class="dark:fill-slate-50 fill-medgicalBlue"
             font-size="35px"
             font-weight="bold"
-            font-family="'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif"
           >
             1
             <tspan dy="-10" font-size="20" dx="-10" font-weight="bold">

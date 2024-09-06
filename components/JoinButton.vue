@@ -1,8 +1,8 @@
 <template>
     <button
         @click="openModal"
-        class="button-primary-icon w-inline-block relative duration-200 group overflow-hidden shrink-0 ubuntu-medium" :class="{
-            'small': small
+        class="button-primary-icon w-inline-block relative duration-200 group overflow-hidden shrink-0 ubuntu-medium hover:border-gray-100 hover:shadow-xl" :class="{
+        'small': small
         }">
         <div
             class="absolute transition-all duration-200 top-6 blur z-[-1] left-6 right-6 group-hover:top-3 group-hover:left-3 group-hover:right-3 bottom-3 group-hover:bottom-2 bg-gradient-to-t from-[#51a7ee] to-transparent rounded-full">
