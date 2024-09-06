@@ -4,7 +4,7 @@
     }">
         <span class="text-base relative pr-5 font-medium cursor-pointer transition-all dark:text-white/80 group-hover:text-medgicalBlue group-hover:underline dark:group-hover:text-gray-200/50"
             :class="{
-                'text-white/90': isOpen,
+                'dark:text-white/90 text-medgicalBlue underline': isOpen,
             }" @click="isOpen = !isOpen">
             {{ question }}
         

@@ -17,8 +17,17 @@
 [x] Added hover animation to try for free button
 [x] Changed "Hospitals and clinics from different sizes ..." to "Hospitals and clinics of different sizes ..."
 [x] Handled theme switch for FAQs i.e adjusted font and background colors and underline on hover
-[x] 
+[x] Made adjustments to footer elements e.g compliance tags, sponsor logos
+[x] Join now button now has a prop (smallLight) to cover cases where the background is dark and the text needs to be white
 
 ### NOTES
 
 - Some file changes are format changes made by my editor's formatter (Prettier, mostly)
+- This branch also includes modifications to previous branches
+
+### TODO
+
+- Adjust the edges of the feedback carousel to work properly with light theme
+- Use a consistent shade of white across different elements
+- Add fade effect on top/bottom edges of cards to help text fade out more elegantly in light mode e.g TranscriptorBot
+- Add theme switch button to allow users toggle themes (also add browser storage for theme switch)

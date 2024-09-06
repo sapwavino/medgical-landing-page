@@ -109,7 +109,7 @@
                 <li class="navHoverScale text-white"><nuxt-link :to="localePath('about')" >  {{ $t('navbar.about') }}</nuxt-link>
                 </li>
             </ul>
-            <JoinButton small cta="try" />
+            <JoinButton smallLight cta="try" />
         </div>
     </div>
 </template>

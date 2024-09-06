@@ -1,5 +1,5 @@
 <template>
-  <div class="container mb-40">
+  <div class="container mb-40 ubuntu-regular">
     <div
       class="md:flex grid grid-cols-2 gap-10 justify-center mb-14 text-center text-medgicalBlue dark:text-gray-100"
     >
@@ -25,7 +25,7 @@
           </svg>
           2h
         </div>
-        <div class="text-sm text-center  leading-4 w-40 mx-auto">
+        <div class="text-sm text-center leading-4 w-40 mx-auto">
           {{ $t("stats.timeusedindocumentation") }}
         </div>
       </div>
@@ -35,7 +35,7 @@
         >
           9.7/10
         </div>
-        <div class="text-sm text-center  leading-4 w-40 mx-auto">
+        <div class="text-sm text-center leading-4 w-40 mx-auto">
           {{ $t("stats.patientsatisfaction") }}
         </div>
       </div>
@@ -49,12 +49,12 @@
           {{ $t("stats.lesserrors") }}
         </div>
       </div>
-      
+
       <div>
         <div class="text-center mb-2 text-3xl font-medium justify-center">
-          < 1min
+          {{ `< 1min` }}
         </div>
-        <div class="text-sm text-center  leading-4 w-52 mx-auto">
+        <div class="text-sm text-center leading-4 w-52 mx-auto">
           {{ $t("stats.timetodocumentation") }}
         </div>
       </div>
@@ -65,11 +65,10 @@
         >
           >100
         </div>
-        <div class="text-sm text-center  leading-4 w-40 mx-auto">
+        <div class="text-sm text-center leading-4 w-40 mx-auto">
           {{ $t("stats.testStats") }}
         </div>
       </div>
-
     </div>
 
     <div
