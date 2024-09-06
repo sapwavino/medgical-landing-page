@@ -17,4 +17,8 @@
 [x] Added hover animation to try for free button
 [x] Changed "Hospitals and clinics from different sizes ..." to "Hospitals and clinics of different sizes ..."
 [x] Handled theme switch for FAQs i.e adjusted font and background colors and underline on hover
+[x] 
 
+### NOTES
+
+- Some file changes are format changes made by my editor's formatter (Prettier, mostly)

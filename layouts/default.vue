@@ -11,7 +11,6 @@ import { ref, onMounted, onBeforeUnmount } from "vue";
 import { useStore } from "vuex";
 const isDarkMode = ref(false);
 const store = useStore();
-console.log(store);
 const checkDarkMode = () => {
   isDarkMode.value = window.matchMedia("(prefers-color-scheme: dark)").matches;
   store.commit("changeTheme", isDarkMode.value ? "dark" : "light");
