@@ -2,10 +2,9 @@
     <div
         @click="continueAnimation()" @mouseenter="continueAnimation()"
         @mouseleave="stop()"
-        style="background-color: #1A191D;"
-        class="flex-1 min-h-0 mt-5 p-4 relative overflow-hidden rounded-xl flex flex-col justify-between">
+        class="bg-zinc-700/80 flex-1 min-h-0 mt-5 p-4 relative overflow-hidden rounded-xl flex flex-col justify-between">
         <div class="text-sm flex-1 overflow-hidden text-zinc-500 hover:text-zinc-400 pb-4 h-36 max-h-36 min-h-36 relative">
-            <b class=" text-zinc-600 font-semibold block mb-1 opacity-50">
+            <b class=" text-zinc-400 font-semibold block mb-1 opacity-40">
                 {{ $t('reportanim.title') }}
             </b>
             {{ reportTranscription }}

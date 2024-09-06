@@ -23,7 +23,8 @@ export default {
         'medgicalGreen': '#CDAEC0',
         'medgicalRed': '#FF6B6B',
         'medgicalBlack': '#000012',
-        'medgicalDarkerGrey': '#1d1c20',
+        'medgicalDarkGrey2': '#1d1c20',
+        'medgicalDarkGreyCard': '#1d1c20',
       }
     },
   },

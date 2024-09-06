@@ -1,7 +1,7 @@
 <template>
     <button
         @click="openModal"
-        class="button-primary-icon w-inline-block relative duration-200 group overflow-hidden shrink-0 " :class="{
+        class="button-primary-icon w-inline-block relative duration-200 group overflow-hidden shrink-0 ubuntu-medium" :class="{
             'small': small
         }">
         <div

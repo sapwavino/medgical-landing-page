@@ -389,7 +389,7 @@ export default defineI18nConfig(() => ({
           "Data encryption ensures data privacy. GDPR and HIPAA compliant",
         feature8_title: "Privacy and anonymization",
         feature8_text:
-          "Patient information is automatically anonymized through our AI before processing by AI",
+          "Patient information is automatically anonymized through our AI before processing",
         feature8_transcription: "TRANSLATION",
         feature8_transcription1: "Dear Mr.",
         feature8_transcription2:

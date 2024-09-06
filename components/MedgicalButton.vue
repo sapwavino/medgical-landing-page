@@ -1,7 +1,7 @@
 <template>
   <button
     type="button"
-    class="transition-all text-sm font-semibold hover:bg-opacity-90 focus:outline-[#0d4f81] outline-offset-2 focus:outline-2 py-3 px-6 rounded-2xl justify-center w-full inline-flex"
+    class="transition-all text-sm font-semibold hover:bg-opacity-90 focus:outline-[#0d4f81] outline-offset-2 focus:outline-2 py-3 px-6 rounded-2xl justify-center w-full inline-flex ubuntu-medium"
     :disabled="disabled"
     :class="{
       ' text-white bg-[#0d4f81] hover:bg-[#0d4f81] ring-1 ring-[#0d4f81] ring-inset cursor-pointer':

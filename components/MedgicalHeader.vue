@@ -2,24 +2,24 @@
     <header
         class="fixed hide-on-modal md:absolute z-30 top-0 left-0 right-0 container bg-medgicalBlue dark:bg-zinc-800/50 shadow-xl backdrop-blur-xl shadow-black/10 ring-1 ring-inset ring-white/5 rounded-b-2xl md:ring-0 md:bg-transparent md:shadow-none ubuntu-regular">
         <nav
-            class="flex items-center justify-between py-4 pr-4 pl-6 md:px-8 md:py-6">
-            <nuxt-link to="/" class="logo"><img class="h-6"
+            class="flex items-center justify-between py-4 pr-4 pl-6 md:px-8 md:py-6 rounded-2xl">
+            <nuxt-link to="/" class="logo" :class="{'bg-medgicalBlue p-3 rounded-md': $store.state.theme !== 'dark'}"><img class="h-6"
                     src="~/assets/logo-white.svg" alt="Medgical" /></nuxt-link>
             <ul class="hidden md:flex gap-9 text-base">
-                <li><nuxt-link :to="localePath('/#features')">
+                <li class="navHoverScale"><nuxt-link :to="localePath('/#features')">
                     {{ $t('navbar.features') }}
                 </nuxt-link>
                 </li>
-                <li><nuxt-link :to="localePath('/pricing')">
+                <li class="navHoverScale"><nuxt-link :to="localePath('/pricing')">
                     {{ $t('navbar.pricing') }}
                 </nuxt-link></li>
-                <li><nuxt-link :to="localePath('/about')">
+                <li class="navHoverScale"><nuxt-link :to="localePath('/about')">
                     {{ $t('navbar.about') }}
                 </nuxt-link>
                 </li>
-                <li><nuxt-link to="https://app.medgical.ai" class="flex gap-1 items-center">
+                <li class="navHoverScale"><nuxt-link to="https://app.medgical.ai" class="flex gap-1 items-center">
                     {{ $t('navbar.app') }}
-                    <svg class="text-white h-4 w-4" xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M17 7l-10 10" /><path d="M8 7l9 0l0 9" /></svg>
+                    <svg class="dark:text-white h-4 w-4" xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M17 7l-10 10" /><path d="M8 7l9 0l0 9" /></svg>
                 </nuxt-link>
                 </li>
             </ul>
@@ -34,7 +34,7 @@
                         }" @click="setLocale('en')">EN</button>
                 <JoinButton cta="try" />
             </div>
-            <button v-if="!isMenuExpanded" class="p-2 rounded-md md:hidden"
+            <button v-if="!isMenuExpanded" class="p-2 rounded-md md:hidden text-white"
                 @click="expandMenu">
                 <svg class="h-6 w-6 opacity-75"
                     xmlns="http://www.w3.org/2000/svg" width="24" height="24"
@@ -47,7 +47,7 @@
                     <path d="M4 18l16 0" />
                 </svg>
             </button>
-            <button v-else class="p-2 rounded-md md:hidden" @click="expandMenu">
+            <button v-else class="p-2 rounded-md md:hidden text-white" @click="expandMenu">
                 <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg"
                     width="24" height="24" viewBox="0 0 24 24" fill="none"
                     stroke="currentColor" stroke-width="2"
@@ -98,15 +98,15 @@
                 '-translate-y-full': !isSubMenuExpanded
             }">
         <div
-            class="transition-all flex items-center gap-6 mx-auto max-w-2xl bg-black/30 backdrop-blur-md shadow-black/20 shadow-xl ring-1 ring-inset ring-white/5 rounded-full py-2 pl-7 pr-2">
+            class="transition-all flex items-center gap-6 mx-auto max-w-2xl bg-medgicalBlue  dark:bg-black/30 backdrop-blur-md shadow-black/20 shadow-xl ring-1 ring-inset ring-white/5 rounded-full py-2 pl-7 pr-2 ubuntu-regular">
             <nuxt-link :to="localePath('/')" class="logo"><img class="h-6"
                     src="~/assets/logo-white.svg" alt="Medgical" /></nuxt-link>
             <ul
-                class="submenu flex-1 flex gap-9 justify-center text-sm whitespace-nowrap font-semibold text-white/50 items-center">
-                <li><nuxt-link :to="localePath('/#features')">  {{ $t('navbar.features') }}</nuxt-link>
+                class="submenu flex-1 flex gap-9 justify-center text-sm whitespace-nowrap font-semibold items-center">
+                <li class="navHoverScale text-white"><nuxt-link :to="localePath('/#features')">  {{ $t('navbar.features') }}</nuxt-link>
                 </li>
-                <li><nuxt-link :to="localePath('pricing')">  {{ $t('navbar.pricing') }}</nuxt-link></li>
-                <li><nuxt-link :to="localePath('about')">  {{ $t('navbar.about') }}</nuxt-link>
+                <li class="navHoverScale text-white"><nuxt-link :to="localePath('pricing')" >  {{ $t('navbar.pricing') }}</nuxt-link></li>
+                <li class="navHoverScale text-white"><nuxt-link :to="localePath('about')" >  {{ $t('navbar.about') }}</nuxt-link>
                 </li>
             </ul>
             <JoinButton small cta="try" />

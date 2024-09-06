@@ -1,9 +1,9 @@
 <template>
-  <div class="relative" id="mainWrapper" :class="
-  $store.state.theme === 'dark'
-    ? 'gradient-wrapper '
-    : ''
-">
+  <div
+    class="relative"
+    id="mainWrapper"
+    :class="$store.state.theme === 'dark' ? 'gradient-wrapper ' : ''"
+  >
     <div class="hover" style="opacity: 0"></div>
     <div
       class="glow-background opacity-0 xl:opacity-0 translate-y-24 h-[130vh] lg:h-[100vh]"
@@ -211,7 +211,10 @@
               </div>
             </div>
             <b
-              class="absolute bottom-5 right-5 bg-accent rounded-full py-1 px-3 text-xs text-white/90"
+              class="absolute bottom-5 right-5 rounded-full py-1 px-3 text-xs text-white/90"
+              :class="
+                $store.state.theme === 'dark' ? 'bg-accent' : 'bg-medgicalBlue'
+              "
               >{{ $t("features.feature1_contactforcustomization") }}</b
             >
           </div>
@@ -227,7 +230,7 @@
                 class="bg-zinc-800 -translate-y-4 ring-1 ring-black/30 h-2 rounded-full absolute w-28 left-1/2 -ml-14"
               ></div>
               <div
-                class="bg-zinc-700 ring-1 ring-inset absolute ring-white/10 shadow-md shadow-black/30 border-b-2 border-zinc-900 rounded-lg h-20 w-20 text-2xl font-semibold text-opacity-50 flex items-center justify-center"
+                class="bg-medgicalBlue dark:bg-zinc-700 ring-1 ring-inset absolute ring-white/10 shadow-md shadow-black/30 border-b-2 border-zinc-900 rounded-lg h-20 w-20 text-2xl font-semibold text-opacity-50 flex items-center justify-center text-white"
               >
                 {{ $t("features.feature2_ai") }}
               </div>
@@ -239,7 +242,7 @@
             <ClientOnly>
               <div class="h-40 mb-5 relative">
                 <div
-                  class="h-10 text-zinc-700 ring-1 gap-2 ring-white/40 transition-all cursor-pointer hover:translate-y-0.5 hover:shadow-sm font-semibold pr-5 pl-4 items-center justify-center absolute left-5 top-5 rounded-md bg-gradient-to-t from-zinc-500 to-zinc-50 shadow-black/20 shadow-md flex"
+                  class="h-10 text-white dark:text-zinc-700 ring-1 gap-2 ring-white/40 transition-all cursor-pointer hover:translate-y-0.5 hover:shadow-sm font-semibold pr-5 pl-4 items-center justify-center absolute left-5 top-5 rounded-md bg-medgicalBlue dark:bg-gradient-to-t from-zinc-500 to-zinc-50 shadow-black/20 shadow-md flex"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -264,7 +267,7 @@
                   {{ $t("features.feature3_copy") }}
                 </div>
                 <div
-                  class="h-10 text-zinc-700 ring-1 gap-2 ring-white/40 transition-all cursor-pointer hover:translate-y-0.5 hover:shadow-sm font-semibold pr-5 pl-4 items-center justify-center absolute right-0 bottom-5 rounded-md bg-gradient-to-t from-zinc-500 to-zinc-50 shadow-black/20 shadow-md flex"
+                  class="h-10 text-white dark:text-zinc-700 ring-1 gap-2 ring-white/40 transition-all cursor-pointer hover:translate-y-0.5 hover:shadow-sm font-semibold pr-5 pl-4 items-center justify-center absolute right-0 bottom-5 rounded-md bg-medgicalBlue dark:bg-gradient-to-t from-zinc-500 to-zinc-50 shadow-black/20 shadow-md flex"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -448,7 +451,10 @@
             <div class="card-title">{{ $t("features.feature5_title") }}</div>
             <div class="card-text">{{ $t("features.feature5_text") }}</div>
             <b
-              class="absolute bottom-5 right-5 bg-accent rounded-full py-1 px-3 text-xs text-white/90"
+              class="absolute bottom-5 right-5 rounded-full py-1 px-3 text-xs text-white/90"
+              :class="
+                $store.state.theme === 'dark' ? 'bg-accent' : 'bg-medgicalBlue'
+              "
               >{{ $t("features.feature1_contactforcustomization") }}</b
             >
           </div>
@@ -526,20 +532,20 @@
             <div class="card-text">{{ $t("features.feature8_text") }}</div>
 
             <div
-              class="flex-1 flex-col justify-center mt-5 bg-black/10 mb-3 cursor-default leading-6 relative overflow-hidden p-5 rounded-xl text-zinc-500 hover:text-zinc-400 transition-all text-sm"
+              class="flex-1 flex-col justify-center mt-5 bg-black/10 mb-3 cursor-default leading-6 relative overflow-hidden p-5 rounded-xl text-zinc-500 dark:hover:text-zinc-400/80 hover:text-zinc-700 transition-all text-sm"
             >
               <b class="text-zinc-600 font-bold opacity-50 mb-1 block">{{
                 $t("features.feature8_transcription")
               }}</b>
               {{ $t("features.feature8_transcription1") }}
               <s
-                class="inline-block px-2 py-1 rounded-xl text-zinc-500/50 cursor-default hover:text-zinc-500/80 bg-black/30 mx-1"
+                class="inline-block px-2 py-1 rounded-xl text-zinc-500/50 cursor-default dark:hover:text-zinc-500/80 hover:text-zinc-700 bg-medgicalYellow  dark:bg-black/30 mx-1"
                 >João</s
               >
               {{ $t("features.feature8_transcription2") }}<br />
               {{ $t("features.feature8_transcription3") }}
               <s
-                class="inline-block px-2 py-1 rounded-xl text-zinc-500/50 cursor-default hover:text-zinc-500/80 bg-black/30 mx-1"
+                class="inline-block px-2 py-1 rounded-xl text-zinc-500/50 cursor-default dark:hover:text-zinc-500/80 hover:text-zinc-700 dark:bg-black/30 mx-1 bg-medgicalYellow"
                 >912 236 23</s
               >
             </div>
@@ -980,11 +986,6 @@ export default defineNuxtComponent({
   watch: {
     $route(to, from) {
       this.goToSection();
-    },
-  },
-  computed: {
-    theme() {
-      return this.$store.state.theme;
     },
   },
 });
