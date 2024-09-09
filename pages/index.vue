@@ -96,7 +96,6 @@
                 </div>
 
                 <div
-                  v-if="$store.state.theme === 'dark'"
                   class="bg-gradient-to-t from-medgicalBlue to-transparent h-10 absolute bottom-0 left-0 right-0"
                 ></div>
               </div>
@@ -207,10 +206,7 @@
               </div>
             </div>
             <b
-              class="absolute bottom-5 right-5 rounded-full py-1 px-3 text-xs text-white/90"
-              :class="
-                $store.state.theme === 'dark' ? 'bg-accent' : 'bg-medgicalBlue'
-              "
+              class="absolute bottom-5 right-5 rounded-full py-1 px-3 text-xs text-white/90 bg-medgicalBlue"
               >{{ $t("features.feature1_contactforcustomization") }}</b
             >
           </div>
@@ -447,10 +443,7 @@
             <div class="card-title">{{ $t("features.feature5_title") }}</div>
             <div class="card-text">{{ $t("features.feature5_text") }}</div>
             <b
-              class="absolute bottom-5 right-5 rounded-full py-1 px-3 text-xs text-white/90"
-              :class="
-                $store.state.theme === 'dark' ? 'bg-accent' : 'bg-medgicalBlue'
-              "
+              class="absolute bottom-5 right-5 rounded-full py-1 px-3 text-xs text-white/90 bg-medgicalBlue"
               >{{ $t("features.feature1_contactforcustomization") }}</b
             >
           </div>
