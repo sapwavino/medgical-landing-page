@@ -566,10 +566,10 @@
         <div class="scroll-parent">
           <div class="w-screen h-full relative gradient-feedback">
             <div
-              class="h-full w-1/6 from-black/70 to-black/0 bg-gradient-to-r z-10 absolute"
+              class="h-full w-1/6 from-gray-50  dark:from-black/70 to-black/0 bg-gradient-to-r z-10 absolute"
             ></div>
             <div
-              class="h-full w-1/6 right-0 from-black/70 to-black/0 bg-gradient-to-l z-10 absolute"
+              class="h-full w-1/6 right-0 from-gray-50  dark:from-black/70 to-black/0 bg-gradient-to-l z-10 absolute"
             ></div>
           </div>
           <div class="scroll-element primary">
