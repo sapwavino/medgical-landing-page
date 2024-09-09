@@ -546,7 +546,7 @@
       <div class="my-32">
         <div class="mx-auto w-full max-w-2xl flex flex-col mb-10">
           <h2
-            class="font-book font-styling font-display mb-2 text-center text-[2rem] md:text-[3rem] tracking-tight leading-[120%] dark:font-gradient text-medgicalBlue"
+            class="font-book font-styling font-display mb-2 text-center text-[2rem] md:text-[3rem] tracking-tight leading-[120%] dark:font-gradient text-medgicalBlue dark:text-white"
             style="
               transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
                 rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
