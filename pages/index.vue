@@ -99,8 +99,7 @@
                 </div>
 
                 <div
-                  v-if="$store.state.theme === 'dark'"
-                  class="bg-gradient-to-t from-zinc-300 to-transparent h-10 absolute bottom-0 left-0 right-0"
+                  class="bg-gradient-to-t from-medgicalBlue dark:from-zinc-300 to-transparent h-10 absolute bottom-0 left-0 right-0"
                 ></div>
               </div>
               <button
@@ -566,10 +565,10 @@
         <div class="scroll-parent">
           <div class="w-screen h-full relative gradient-feedback">
             <div
-              class="h-full w-1/6 from-black/70 to-black/0 bg-gradient-to-r z-10 absolute"
+              class="h-full w-1/6 from-gray-50 dark:from-black/70 to-black/0 bg-gradient-to-r z-10 absolute"
             ></div>
             <div
-              class="h-full w-1/6 right-0 from-black/70 to-black/0 bg-gradient-to-l z-10 absolute"
+              class="h-full w-1/6 right-0 from-gray-50 dark:from-black/70 to-black/0 bg-gradient-to-l z-10 absolute"
             ></div>
           </div>
           <div class="scroll-element primary">
