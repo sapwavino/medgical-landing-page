@@ -1,9 +1,9 @@
 <template>
     <header
-        class="fixed hide-on-modal md:absolute z-30 top-0 left-0 right-0 container bg-medgicalBlue dark:bg-zinc-800/50 shadow-xl backdrop-blur-xl shadow-black/10 ring-1 ring-inset ring-white/5 rounded-b-2xl md:ring-0 md:bg-transparent md:shadow-none ubuntu-regular">
+        class="fixed hide-on-modal md:absolute z-30 top-0 left-0 right-0 container bg-medgicalBlue  shadow-xl backdrop-blur-xl shadow-black/10 ring-1 ring-inset ring-white/5 rounded-b-2xl md:ring-0 md:bg-transparent md:shadow-none ubuntu-regular">
         <nav
             class="flex items-center justify-between py-4 pr-4 pl-6 md:px-8 md:py-6 rounded-2xl">
-            <nuxt-link to="/" class="logo" :class="{'bg-medgicalBlue p-3 rounded-md': $store.state.theme !== 'dark'}"><img class="h-6"
+            <nuxt-link to="/" class="logo bg-medgicalBlue p-3 rounded-md" ><img class="h-6"
                     src="~/assets/logo-white.svg" alt="Medgical" /></nuxt-link>
             <ul class="hidden md:flex gap-9 text-base">
                 <li class="navHoverScale"><nuxt-link :to="localePath('/#features')">
@@ -19,7 +19,7 @@
                 </li>
                 <li class="navHoverScale"><nuxt-link to="https://app.medgical.ai" class="flex gap-1 items-center">
                     {{ $t('navbar.app') }}
-                    <svg class="dark:text-white h-4 w-4" xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M17 7l-10 10" /><path d="M8 7l9 0l0 9" /></svg>
+                    <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M17 7l-10 10" /><path d="M8 7l9 0l0 9" /></svg>
                 </nuxt-link>
                 </li>
             </ul>
@@ -58,7 +58,7 @@
                 </svg>
             </button>
         </nav>
-        <div class="menu-mobile text-right opacity-80 overflow-hidden text-xl md:hidden transition-all duration-500 dark:text-medgicalDarkGrey text-white"
+        <div class="menu-mobile text-right opacity-80 overflow-hidden text-xl md:hidden transition-all duration-500  text-white"
             :class="{
                 'h-[21.5rem]': isMenuExpanded,
                 'h-0': !isMenuExpanded
@@ -74,9 +74,9 @@
                 </nuxt-link>
                 <nuxt-link to="https://app.medgical.ai" class="nav flex gap-1 items-center justify-end">
                     {{ $t('navbar.app') }}
-                    <svg class="dark:fill-white fill-black h-4 w-4" xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M17 7l-10 10" /><path d="M8 7l9 0l0 9" /></svg>
+                    <svg class=" fill-black h-4 w-4" xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M17 7l-10 10" /><path d="M8 7l9 0l0 9" /></svg>
                 </nuxt-link>
-                <div class="flex justify-between items-center dark:text-white text-gray-50">
+                <div class="flex justify-between items-center  text-gray-50">
                     <div class="flex gap-3 items-center">
                         <button class="text-base font-semibold" :class="{
                             'opacity-70': locale !== 'pt',
@@ -98,7 +98,7 @@
                 '-translate-y-full': !isSubMenuExpanded
             }">
         <div
-            class="transition-all flex items-center gap-6 mx-auto max-w-2xl bg-medgicalBlue  dark:bg-black/30 backdrop-blur-md shadow-black/20 shadow-xl ring-1 ring-inset ring-white/5 rounded-full py-2 pl-7 pr-2 ubuntu-regular">
+            class="transition-all flex items-center gap-6 mx-auto max-w-2xl bg-medgicalBlue   backdrop-blur-md shadow-black/20 shadow-xl ring-1 ring-inset ring-white/5 rounded-full py-2 pl-7 pr-2 ubuntu-regular">
             <nuxt-link :to="localePath('/')" class="logo"><img class="h-6"
                     src="~/assets/logo-white.svg" alt="Medgical" /></nuxt-link>
             <ul

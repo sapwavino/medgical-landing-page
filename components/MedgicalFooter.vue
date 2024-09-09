@@ -3,21 +3,19 @@
     class="flex max-w-6xl flex-col gap-16 md:gap-5 md:flex-row mx-auto mt-80 justify-between px-8"
   >
     <div class="flex flex-col items-start gap-5 min-w-60">
-      <img v-if="$store.state.theme === 'dark'" class="h-6 mt-0.5" src="~/assets/logo-white.svg" alt="Medgical" />
-      <img v-else class="h-6 mt-0.5" src="~/assets/logo.svg" alt="Medgical" />
-      <p class="text-base font-medium dark:text-white/90 opacity-50 mb-2">
+      <img class="h-6 mt-0.5" src="~/assets/logo.svg" alt="Medgical" />
+      <p class="text-base font-medium  opacity-50 mb-2">
         You save lives, we note it!
       </p>
       <JoinButton small />
 
-      <div class="flex flex-col gap-2 text-xs dark:text-white/50 mt-5">
+      <div class="flex flex-col gap-2 text-xs  mt-5">
         {{ $t("footer.sponsored") }}
-        <img v-if="$store.state.theme === 'dark'" class="h-9 mt-0.5" src="~/assets/BI-White.svg" alt="Boehringer" />
-        <img v-else  class="h-9 mt-0.5" src="~/assets/BI-Dark-Green.svg" alt="Boehringer" />
+        <img class="h-9 mt-0.5" src="~/assets/BI-Dark-Green.svg" alt="Boehringer" />
       </div>
     </div>
     <div class="flex flex-col items-start gap-5">
-      <h3 class="text-lg font-semibold dark:text-white leading-4">
+      <h3 class="text-lg font-semibold  leading-4">
         {{ $t("footer.company") }}
       </h3>
       <nuxt-link :to="localePath('/about')">{{ $t("footer.about") }}</nuxt-link>
@@ -27,7 +25,7 @@
       <a class="hidden">Blog</a>
     </div>
     <div class="flex flex-col items-start gap-5">
-      <h3 class="text-lg font-semibold dark:text-white leading-4">
+      <h3 class="text-lg font-semibold  leading-4">
         {{ $t("footer.legal") }}
       </h3>
       <nuxt-link :to="localePath('/legal')">
@@ -40,10 +38,10 @@
     </div>
     <!-- COMPLIANCE TAGS -->
     <div class="flex flex-row md:flex-col items-end gap-5">
-      <div class="rounded-md overflow-hidden flex dark:bg-zinc-900 items-center shadow-md">
+      <div class="rounded-md overflow-hidden flex  items-center shadow-md">
         <div class="p-2 bg-blue-500">
           <svg
-            class="h-8 w-8 dark:text-white"
+            class="h-8 w-8 "
             xmlns="http://www.w3.org/2000/svg"
             width="24"
             height="24"
@@ -63,13 +61,13 @@
           </svg>
         </div>
         <div
-          class="flex-1 flex flex-col items-start justify-center text-xs font-medium px-3 opacity-80 dark:text-white"
+          class="flex-1 flex flex-col items-start justify-center text-xs font-medium px-3 opacity-80 "
         >
           <div class="font-extrabold text-base leading-4">GDPR</div>
           COMPLIANT
         </div>
       </div>
-      <div class="rounded-md overflow-hidden flex dark:bg-zinc-900 items-center  shadow-md">
+      <div class="rounded-md overflow-hidden flex  items-center  shadow-md">
         <div class="p-2 bg-zinc-200">
           <svg
             class="h-8 w-8 text-blue-600"
@@ -90,7 +88,7 @@
           </svg>
         </div>
         <div
-          class="flex-1 flex flex-col items-start justify-center text-xs font-medium px-3 opacity-80 dark:text-white"
+          class="flex-1 flex flex-col items-start justify-center text-xs font-medium px-3 opacity-80 "
         >
           <div class="font-extrabold text-base leading-4">HIPAA</div>
           COMPLIANT

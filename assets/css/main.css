@@ -131,7 +131,7 @@ body {
   margin: 0;
   /* color: #fff; */
   /* background-color: #1e1e21; */
-  @apply dark:text-gray-50 text-black;
+  @apply  text-black;
 }
 
 .section-hero {
@@ -243,14 +243,14 @@ h6 {
   /* color: #bdbdc0; */
   margin-bottom: 32px;
   font-weight: 500;
-  @apply text-sm sm:text-base md:text-xl sm:w-full dark:text-gray-200 text-black;
+  @apply text-sm sm:text-base md:text-xl sm:w-full  text-black;
 }
 
 .display-paragraph-2 {
   /* color: #bdbdc0; */
   margin-bottom: 32px;
   font-weight: 500;
-  @apply text-sm sm:text-base md:text-lg sm:w-full dark:text-gray-200 text-black;
+  @apply text-sm sm:text-base md:text-lg sm:w-full  text-black;
 }
 
 .button-primary-icon.disabled {
@@ -273,13 +273,13 @@ h6 {
   padding: 10px 16px;
   display: flex;
   box-shadow: 1px 10px 50px 28px rgba(0, 0, 0, 0.1) inset;
-  @apply dark:text-white text-opacity-80;
+  @apply  text-opacity-80;
 }
 .button-primary-icon.small span {
   padding: 10px 17px;
   display: flex;
   box-shadow: 1px 10px 50px 28px rgba(0, 0, 0, 0.1) inset;
-  @apply text-medgicalDarkBlue  dark:text-white text-opacity-80 text-sm;
+  @apply text-medgicalDarkBlue   text-opacity-80 text-sm;
 }
 .button-primary-icon.small-light span {
   padding: 10px 17px;
@@ -289,7 +289,7 @@ h6 {
 }
 .button-primary-icon:hover span {
   box-shadow: 1px 10px 20px 18px rgba(0, 0, 0, 0.05) inset;
-  @apply dark:text-white text-opacity-80;
+  @apply  text-opacity-80;
 }
 .button-primary-icon:hover {
   border-color: rgba(255, 255, 255, 0.1);
@@ -399,7 +399,7 @@ h6 {
   padding: 22px;
   position: relative;
   overflow: hidden;
-  @apply dark:bg-medgicalDarkGrey2 bg-gray-300;
+  @apply  bg-gray-300;
 }
 .card.nopadding {
   padding: 0 !important;
@@ -414,22 +414,22 @@ h6 {
   padding: 22px;
   position: relative;
   overflow: hidden;
-  @apply dark:bg-medgicalDarkGrey2 bg-gray-300;
+  @apply  bg-gray-300;
 }
 .card-feedback-text {
-  @apply text-base font-medium   dark:text-black  dark:text-white/70 leading-5;
+  @apply text-base font-medium    leading-5;
 }
 .feedback-name {
-  @apply text-lg font-semibold text-black  dark:text-white/90;
+  @apply text-lg font-semibold text-black  ;
 }
 .feedback-title {
-  @apply text-xs font-medium dark:text-white/50 text-black;
+  @apply text-xs font-medium  text-black;
 }
 .card-title {
   @apply text-xl font-semibold mb-3;
 }
 .card-text {
-  @apply text-base font-medium text-black  dark:text-white/70 leading-5;
+  @apply text-base font-medium text-black   leading-5;
 }
 .grid-features {
   z-index: 2;
@@ -441,7 +441,7 @@ h6 {
 }
 
 footer a {
-  @apply text-base font-medium text-black  dark:text-white/90 opacity-50 hover:opacity-90 cursor-pointer transition-all;
+  @apply text-base font-medium text-black   opacity-50 hover:opacity-90 cursor-pointer transition-all;
 }
 
 a:hover {
@@ -457,14 +457,14 @@ nav a.logo {
 header a.nav {
   /* color: #fff; */
   opacity: 0.7;
-  @apply dark:text-gray-50 text-white;
+  @apply  text-white;
 }
 header a.nav:hover {
   /* color: #fff; */
   opacity: 1;
   transition: all 0.3s ease-in-out;
   text-decoration: none;
-  @apply dark:text-gray-50 text-black;
+  @apply  text-black;
 }
 nav a {
   font-size: 0.93rem;
@@ -473,7 +473,7 @@ nav a {
   text-decoration: none;
   opacity: 0.7;
   transition: all 0.3s ease-in-out;
-  @apply dark:text-gray-50 text-black;
+  @apply  text-black;
 }
 nav a:hover {
   opacity: 1;
@@ -605,7 +605,7 @@ nav a:hover {
 }
 
 .consultation-type {
-  @apply text-xs font-semibold shrink-0 w-32 h-16 flex flex-col justify-center items-center text-black  dark:text-white/70 bg-white/5 rounded-lg px-3 py-2 text-center ring-1 ring-inset ring-white/10;
+  @apply text-xs font-semibold shrink-0 w-32 h-16 flex flex-col justify-center items-center text-black   bg-white/5 rounded-lg px-3 py-2 text-center ring-1 ring-inset ring-white/10;
 }
 
 .glow-background {
@@ -622,7 +622,7 @@ nav a:hover {
 }
 
 .feature-list-pricing {
-  @apply leading-6 text-sm list-none mt-10  text-black  dark:text-white/70 flex flex-col gap-2.5;
+  @apply leading-6 text-sm list-none mt-10  text-black   flex flex-col gap-2.5;
 }
 
 .feature-list-pricing li {
@@ -871,7 +871,7 @@ nav a:hover {
 }
 
 .shredded-paper .alert {
-  @apply text-white  dark:text-black/30 text-7xl font-semibold mt-28 ml-16;
+  @apply text-white   text-7xl font-semibold mt-28 ml-16;
 }
 
 @-webkit-keyframes shredGo {
@@ -1073,20 +1073,13 @@ nav a:hover {
   z-index: 12;
   text-align: center;
   /* color: #fff; */
-  @apply bg-zinc-600 rounded-3xl flex px-10 items-center dark:text-gray-50 text-black;
+  @apply bg-zinc-600 rounded-3xl flex px-10 items-center  text-black;
 }
 
 .submenu a {
   @apply font-medium  opacity-50 hover:opacity-90 cursor-pointer transition-all;
 }
 
-body.with-modal-open {
-  @apply bg-black;
-}
-
-body {
-  @apply dark:bg-black;
-}
 
 #__nuxt {
   @apply transition-all overflow-y-auto overflow-x-hidden h-screen w-screen;

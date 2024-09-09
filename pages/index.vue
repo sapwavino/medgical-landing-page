@@ -2,14 +2,13 @@
   <div
     class="relative"
     id="mainWrapper"
-    :class="$store.state.theme === 'dark' ? 'gradient-wrapper ' : ''"
   >
     <div class="hover" style="opacity: 0"></div>
     <div
       class="glow-background opacity-0 xl:opacity-0 translate-y-24 h-[130vh] lg:h-[100vh]"
     ></div>
     <div
-      class="bg-light-stars dark:bg-dark-stars sparks-background opacity-90"
+      class="bg-light-stars sparks-background opacity-90"
       style="z-index: 0"
     ></div>
     <MedgicalHeader />
@@ -17,14 +16,12 @@
       <div
         class="container-max flex flex-col text-center lg:text-left lg:flex-row items-center justify-around lg:justify-between sm:px-10"
       >
-        <div class="intro-block min-h-56 h-[50vh] lg:pt-0 items-center lg:items-start">
+        <div
+          class="intro-block min-h-56 h-[50vh] lg:pt-0 items-center lg:items-start"
+        >
           <h1
-            class="capitalize"
-            :class="
-              $store.state.theme === 'dark'
-                ? 'display-1'
-                : 'text-medgicalDarkBlue display-11'
-            "
+            class="capitalize text-medgicalDarkBlue display-11"
+            
           >
             {{ $t("hero1") }}<br />{{ $t("hero2") }}
           </h1>
@@ -51,7 +48,7 @@
                 ref="transcriptorbot"
                 class="asr h-96 w-72 md:h-[26rem] md:w-[19rem]"
                 :class="{
-                  '-translate-x-10 translate-y-5 scale-90': generated
+                  '-translate-x-10 translate-y-5 scale-90': generated,
                 }"
               />
             </ClientOnly>
@@ -59,10 +56,10 @@
 
           <div class="paralax1 absolute z-20 top-5 left-0">
             <div
-              class="bg-medgicalBlue text-white dark:bg-zinc-300 transition-all duration-1000 dark:text-zinc-800 ring-white/5 rounded-3xl shadow-lg shadow-black/10 h-96 w-72 md:h-[26rem] md:w-[19rem] flex flex-col p-5"
+              class="bg-medgicalBlue text-white transition-all duration-1000 ring-white/5 rounded-3xl shadow-lg shadow-black/10 h-96 w-72 md:h-[26rem] md:w-[19rem] flex flex-col p-5"
               :class="{
                 'opacity-0 translate-x-10 scale-110': !generated,
-                'opacity-100 translate-x-0 scale-100': generated
+                'opacity-100 translate-x-0 scale-100': generated,
               }"
             >
               <div class="flex items-center">
@@ -100,7 +97,7 @@
 
                 <div
                   v-if="$store.state.theme === 'dark'"
-                  class="bg-gradient-to-t from-zinc-300 to-transparent h-10 absolute bottom-0 left-0 right-0"
+                  class="bg-gradient-to-t from-medgicalBlue to-transparent h-10 absolute bottom-0 left-0 right-0"
                 ></div>
               </div>
               <button
@@ -134,7 +131,9 @@
           <div class="card sm:col-span-2 flex items-stretch">
             <div class="card-title">{{ $t("features.feature1_title") }}</div>
             <div class="card-text">{{ $t("features.feature1_text") }}</div>
-            <div class="bg-black/10 rounded-xl mb-10 mt-5 relative overflow-hidden">
+            <div
+              class="bg-black/10 rounded-xl mb-10 mt-5 relative overflow-hidden"
+            >
               <div class="scroll-parent-vertical w-80 mx-auto">
                 <div class="scroll-element-vertical primary-vertical">
                   <div class="flex flex-col gap-5">
@@ -169,7 +168,9 @@
                   </div>
                 </div>
 
-                <div class="scroll-element-vertical right-0 primary-vertical-down">
+                <div
+                  class="scroll-element-vertical right-0 primary-vertical-down"
+                >
                   <div class="flex flex-col gap-5">
                     <div class="consultation-type">
                       {{ $t("features.feature1_oncology") }}
@@ -185,7 +186,9 @@
                     </div>
                   </div>
                 </div>
-                <div class="scroll-element-vertical right-0 secondary-vertical-down">
+                <div
+                  class="scroll-element-vertical right-0 secondary-vertical-down"
+                >
                   <div class="flex flex-col gap-5">
                     <div class="consultation-type">
                       {{ $t("features.feature1_oncology") }}
@@ -205,7 +208,9 @@
             </div>
             <b
               class="absolute bottom-5 right-5 rounded-full py-1 px-3 text-xs text-white/90"
-              :class="$store.state.theme === 'dark' ? 'bg-accent' : 'bg-medgicalBlue'"
+              :class="
+                $store.state.theme === 'dark' ? 'bg-accent' : 'bg-medgicalBlue'
+              "
               >{{ $t("features.feature1_contactforcustomization") }}</b
             >
           </div>
@@ -221,7 +226,7 @@
                 class="bg-zinc-800 -translate-y-4 ring-1 ring-black/30 h-2 rounded-full absolute w-28 left-1/2 -ml-14"
               ></div>
               <div
-                class="bg-medgicalBlue dark:bg-zinc-700 ring-1 ring-inset absolute ring-white/10 shadow-md shadow-black/30 border-b-2 border-zinc-900 rounded-lg h-20 w-20 text-2xl font-semibold text-opacity-50 flex items-center justify-center text-white"
+                class="bg-medgicalBlue ring-1 ring-inset absolute ring-white/10 shadow-md shadow-black/30 border-b-2 border-zinc-900 rounded-lg h-20 w-20 text-2xl font-semibold text-opacity-50 flex items-center justify-center text-white"
               >
                 {{ $t("features.feature2_ai") }}
               </div>
@@ -233,7 +238,7 @@
             <ClientOnly>
               <div class="h-40 mb-5 relative">
                 <div
-                  class="h-10 text-white dark:text-zinc-700 ring-1 gap-2 ring-white/40 transition-all cursor-pointer hover:translate-y-0.5 hover:shadow-sm font-semibold pr-5 pl-4 items-center justify-center absolute left-5 top-5 rounded-md bg-medgicalBlue dark:bg-gradient-to-t from-zinc-500 to-zinc-50 shadow-black/20 shadow-md flex"
+                  class="h-10 text-white ring-1 gap-2 ring-white/40 transition-all cursor-pointer hover:translate-y-0.5 hover:shadow-sm font-semibold pr-5 pl-4 items-center justify-center absolute left-5 top-5 rounded-md bg-medgicalBlue from-zinc-500 to-zinc-50 shadow-black/20 shadow-md flex"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -258,7 +263,7 @@
                   {{ $t("features.feature3_copy") }}
                 </div>
                 <div
-                  class="h-10 text-white dark:text-zinc-700 ring-1 gap-2 ring-white/40 transition-all cursor-pointer hover:translate-y-0.5 hover:shadow-sm font-semibold pr-5 pl-4 items-center justify-center absolute right-0 bottom-5 rounded-md bg-medgicalBlue dark:bg-gradient-to-t from-zinc-500 to-zinc-50 shadow-black/20 shadow-md flex"
+                  class="h-10 text-white ring-1 gap-2 ring-white/40 transition-all cursor-pointer hover:translate-y-0.5 hover:shadow-sm font-semibold pr-5 pl-4 items-center justify-center absolute right-0 bottom-5 rounded-md bg-medgicalBlue from-zinc-500 to-zinc-50 shadow-black/20 shadow-md flex"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -309,51 +314,51 @@
                         :div-id="'particles-text'"
                         :config="{
                           fullScreen: {
-                            enable: false
+                            enable: false,
                           },
                           particles: {
                             number: {
                               value: 2000,
                               density: {
                                 enable: true,
-                                value_area: 500
-                              }
+                                value_area: 500,
+                              },
                             },
                             color: {
-                              value: '#ffffff'
+                              value: '#ffffff',
                             },
                             shape: {
                               type: 'star',
                               stroke: {
                                 width: 0,
-                                color: '#000000'
+                                color: '#000000',
                               },
                               polygon: {
-                                nb_sides: 2
+                                nb_sides: 2,
                               },
                               image: {
                                 src: 'img/github.svg',
                                 width: 100,
-                                height: 100
-                              }
+                                height: 100,
+                              },
                             },
                             opacity: {
                               animation: {
                                 enable: true,
                                 speed: 1,
-                                sync: false
+                                sync: false,
                               },
-                              value: { min: 0.1, max: 0.5 }
+                              value: { min: 0.1, max: 0.5 },
                             },
                             size: {
-                              value: { min: 1, max: 1.5 }
+                              value: { min: 1, max: 1.5 },
                             },
                             line_linked: {
                               enable: false,
                               distance: 150,
                               color: '#ffffff',
                               opacity: 1,
-                              width: 1
+                              width: 1,
                             },
                             move: {
                               direction: 'none',
@@ -361,49 +366,49 @@
                               outModes: 'out',
                               random: true,
                               speed: 0.1,
-                              straight: false
-                            }
+                              straight: false,
+                            },
                           },
                           interactivity: {
                             detect_on: 'canvas',
                             events: {
                               onhover: {
                                 enable: true,
-                                mode: 'bubble'
+                                mode: 'bubble',
                               },
                               onclick: {
                                 enable: true,
-                                mode: 'push'
+                                mode: 'push',
                               },
-                              resize: true
+                              resize: true,
                             },
                             modes: {
                               grab: {
                                 distance: 400,
                                 line_linked: {
-                                  opacity: 1
-                                }
+                                  opacity: 1,
+                                },
                               },
                               bubble: {
                                 distance: 83.91608391608392,
                                 size: 1,
                                 duration: 3,
                                 opacity: 1,
-                                speed: 3
+                                speed: 3,
                               },
                               repulse: {
                                 distance: 200,
-                                duration: 0.1
+                                duration: 0.1,
                               },
                               push: {
-                                particles_nb: 4
+                                particles_nb: 4,
                               },
                               remove: {
-                                particles_nb: 2
-                              }
-                            }
+                                particles_nb: 2,
+                              },
+                            },
                           },
-                          detectRetina: true
+                          detectRetina: true,
                         }"
                         class="w-full h-full"
                       />
@@ -420,7 +425,9 @@
             </div>
           </div>
           <div class="card sm:col-span-2">
-            <div class="h-52 group bg-black/10 mb-5 relative overflow-hidden rounded-xl">
+            <div
+              class="h-52 group bg-black/10 mb-5 relative overflow-hidden rounded-xl"
+            >
               <div
                 class="absolute shadow-lg text-sm font-semibold text-center text-black/50 shadow-black/10 w-32 top-16 left-2 sm:left-10 h-40 rounded-lg bg-[#EFE9AE] px-3 group-hover:opacity-100 transition-all py-5 group-hover:-translate-y-2 group-hover:rotate-3"
               >
@@ -441,7 +448,9 @@
             <div class="card-text">{{ $t("features.feature5_text") }}</div>
             <b
               class="absolute bottom-5 right-5 rounded-full py-1 px-3 text-xs text-white/90"
-              :class="$store.state.theme === 'dark' ? 'bg-accent' : 'bg-medgicalBlue'"
+              :class="
+                $store.state.theme === 'dark' ? 'bg-accent' : 'bg-medgicalBlue'
+              "
               >{{ $t("features.feature1_contactforcustomization") }}</b
             >
           </div>
@@ -456,7 +465,9 @@
           </div>
 
           <div class="card">
-            <div class="h-52 mb-6 security-hologram overflow-hidden relative group/card">
+            <div
+              class="h-52 mb-6 security-hologram overflow-hidden relative group/card"
+            >
               <div
                 style="
                   background: radial-gradient(
@@ -484,13 +495,21 @@
               <div
                 class="security-hologram-inner absolute inset-0 rounded-2xl bg-gradient-to-r from-green-500 to-blue-700 opacity-0 group-hover/card:opacity-100 backdrop-blur-xl transition duration-500"
                 style="
-                  mask-image: radial-gradient(250px at 4px 258px, white, transparent);
+                  mask-image: radial-gradient(
+                    250px at 4px 258px,
+                    white,
+                    transparent
+                  );
                 "
               ></div>
               <div
                 class="security-hologram-inner2 absolute inset-0 rounded-2xl opacity-50 mix-blend-overlay group-hover/card:opacity-100"
                 style="
-                  mask-image: radial-gradient(250px at 125px 125px, white, transparent);
+                  mask-image: radial-gradient(
+                    250px at 125px 125px,
+                    white,
+                    transparent
+                  );
                 "
               >
                 <p
@@ -509,20 +528,20 @@
             <div class="card-text">{{ $t("features.feature8_text") }}</div>
 
             <div
-              class="flex-1 flex-col justify-center mt-5 bg-black/10 mb-3 cursor-default leading-6 relative overflow-hidden p-5 rounded-xl text-zinc-500 dark:hover:text-zinc-400/80 hover:text-zinc-700 transition-all text-sm"
+              class="flex-1 flex-col justify-center mt-5 bg-black/10 mb-3 cursor-default leading-6 relative overflow-hidden p-5 rounded-xl text-zinc-500 hover:text-zinc-700 transition-all text-sm"
             >
               <b class="text-zinc-600 font-bold opacity-50 mb-1 block">{{
                 $t("features.feature8_transcription")
               }}</b>
               {{ $t("features.feature8_transcription1") }}
               <s
-                class="inline-block px-2 py-1 rounded-xl text-zinc-500/50 cursor-default dark:hover:text-zinc-500/80 hover:text-zinc-700 bg-medgicalYellow dark:bg-black/30 mx-1"
+                class="inline-block px-2 py-1 rounded-xl text-zinc-500/50 cursor-default hover:text-zinc-700 bg-medgicalYellow mx-1"
                 >João</s
               >
               {{ $t("features.feature8_transcription2") }}<br />
               {{ $t("features.feature8_transcription3") }}
               <s
-                class="inline-block px-2 py-1 rounded-xl text-zinc-500/50 cursor-default dark:hover:text-zinc-500/80 hover:text-zinc-700 dark:bg-black/30 mx-1 bg-medgicalYellow"
+                class="inline-block px-2 py-1 rounded-xl text-zinc-500/50 cursor-default hover:text-zinc-700 mx-1 bg-medgicalYellow"
                 >912 236 23</s
               >
             </div>
@@ -546,10 +565,10 @@
       <div class="my-32">
         <div class="mx-auto w-full max-w-2xl flex flex-col mb-10">
           <h2
-            class="font-book font-styling font-display mb-2 text-center text-[2rem] md:text-[3rem] tracking-tight leading-[120%] dark:font-gradient text-medgicalBlue dark:text-white"
+            class="font-book font-styling font-display mb-2 text-center text-[2rem] md:text-[3rem] tracking-tight leading-[120%] text-medgicalBlue"
             style="
-              transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
-                rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+              transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1)
+                rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
               opacity: 1;
               transform-style: preserve-3d;
             "
@@ -566,20 +585,25 @@
         <div class="scroll-parent">
           <div class="w-screen h-full relative gradient-feedback">
             <div
-              class="h-full w-1/6 from-gray-50  dark:from-black/70 to-black/0 bg-gradient-to-r z-10 absolute"
+              class="h-full w-1/6 from-gray-50 to-black/0 bg-gradient-to-r z-10 absolute"
             ></div>
             <div
-              class="h-full w-1/6 right-0 from-gray-50  dark:from-black/70 to-black/0 bg-gradient-to-l z-10 absolute"
+              class="h-full w-1/6 right-0 from-gray-50 to-black/0 bg-gradient-to-l z-10 absolute"
             ></div>
           </div>
           <div class="scroll-element primary">
             <div class="flex gap-10 px-5">
-              <div class="card-feedback flex flex-col items-start justify-start gap-5">
+              <div
+                class="card-feedback flex flex-col items-start justify-start gap-5"
+              >
                 <div class="card-feedback-text flex-1">
                   "{{ $t("feedback.feedback1") }}"
                 </div>
                 <div class="flex gap-5 items-center">
-                  <img src="@/assets/feedback2.png" class="h-10 w-10 rounded-full" />
+                  <img
+                    src="@/assets/feedback2.png"
+                    class="h-10 w-10 rounded-full"
+                  />
                   <div>
                     <div class="feedback-name">
                       {{ $t("feedback.feedback1_name") }}
@@ -590,12 +614,17 @@
                   </div>
                 </div>
               </div>
-              <div class="card-feedback flex flex-col items-start justify-start gap-5">
+              <div
+                class="card-feedback flex flex-col items-start justify-start gap-5"
+              >
                 <div class="card-feedback-text flex-1">
                   "{{ $t("feedback.feedback2") }}"
                 </div>
                 <div class="flex gap-5 items-center justify-start">
-                  <img src="@/assets/feedback1.png" class="h-10 w-10 rounded-full" />
+                  <img
+                    src="@/assets/feedback1.png"
+                    class="h-10 w-10 rounded-full"
+                  />
                   <div>
                     <div class="feedback-name">
                       {{ $t("feedback.feedback2_name") }}
@@ -608,12 +637,17 @@
                   </div>
                 </div>
               </div>
-              <div class="card-feedback flex flex-col items-start justify-start gap-5">
+              <div
+                class="card-feedback flex flex-col items-start justify-start gap-5"
+              >
                 <div class="card-feedback-text flex-1">
                   "{{ $t("feedback.feedback3") }}"
                 </div>
                 <div class="flex gap-5 items-center">
-                  <img src="@/assets/feedback3.jpg" class="h-10 w-10 rounded-full" />
+                  <img
+                    src="@/assets/feedback3.jpg"
+                    class="h-10 w-10 rounded-full"
+                  />
                   <div>
                     <div class="feedback-name">
                       {{ $t("feedback.feedback3_name") }}
@@ -628,12 +662,17 @@
           </div>
           <div class="scroll-element secondary">
             <div class="flex gap-10 px-5">
-              <div class="card-feedback flex flex-col items-start justify-start gap-5">
+              <div
+                class="card-feedback flex flex-col items-start justify-start gap-5"
+              >
                 <div class="card-feedback-text flex-1">
                   "{{ $t("feedback.feedback1") }}"
                 </div>
                 <div class="flex gap-5 items-center">
-                  <img src="@/assets/feedback2.png" class="h-10 w-10 rounded-full" />
+                  <img
+                    src="@/assets/feedback2.png"
+                    class="h-10 w-10 rounded-full"
+                  />
                   <div>
                     <div class="feedback-name">
                       {{ $t("feedback.feedback1_name") }}
@@ -644,12 +683,17 @@
                   </div>
                 </div>
               </div>
-              <div class="card-feedback flex flex-col items-start justify-start gap-5">
+              <div
+                class="card-feedback flex flex-col items-start justify-start gap-5"
+              >
                 <div class="card-feedback-text flex-1">
                   "{{ $t("feedback.feedback2") }}"
                 </div>
                 <div class="flex gap-5 items-center justify-start">
-                  <img src="@/assets/feedback1.png" class="h-10 w-10 rounded-full" />
+                  <img
+                    src="@/assets/feedback1.png"
+                    class="h-10 w-10 rounded-full"
+                  />
                   <div>
                     <div class="feedback-name">
                       {{ $t("feedback.feedback2_name") }}
@@ -662,12 +706,17 @@
                   </div>
                 </div>
               </div>
-              <div class="card-feedback flex flex-col items-start justify-start gap-5">
+              <div
+                class="card-feedback flex flex-col items-start justify-start gap-5"
+              >
                 <div class="card-feedback-text flex-1">
                   "{{ $t("feedback.feedback3") }}"
                 </div>
                 <div class="flex gap-5 items-center">
-                  <img src="@/assets/feedback3.jpg" class="h-10 w-10 rounded-full" />
+                  <img
+                    src="@/assets/feedback3.jpg"
+                    class="h-10 w-10 rounded-full"
+                  />
                   <div>
                     <div class="feedback-name">
                       {{ $t("feedback.feedback3_name") }}
@@ -705,7 +754,7 @@ export default defineNuxtComponent({
       generated: false,
       todayDate: new Date().toLocaleDateString(),
       transcriptionWords: [],
-      timers: []
+      timers: [],
     };
   },
   head() {
@@ -717,9 +766,9 @@ export default defineNuxtComponent({
           hid: "description",
           name: "description",
           content:
-            "Medgical é uma plataforma que gera notas clínicas e relatórios médicos automaticamente, através de IA e Machine Learning."
-        }
-      ]
+            "Medgical é uma plataforma que gera notas clínicas e relatórios médicos automaticamente, através de IA e Machine Learning.",
+        },
+      ],
     };
   },
   mounted() {
@@ -775,9 +824,17 @@ export default defineNuxtComponent({
       //for each hoverHologram
       console.log(left, top, hoverHologram);
       hoverHologram.style.maskImage =
-        "radial-gradient(250px at " + top + " " + left + ", white, transparent)";
+        "radial-gradient(250px at " +
+        top +
+        " " +
+        left +
+        ", white, transparent)";
       hoverHologram2.style.maskImage =
-        "radial-gradient(250px at " + top + " " + left + ", white, transparent)";
+        "radial-gradient(250px at " +
+        top +
+        " " +
+        left +
+        ", white, transparent)";
       //change security hologram text
       let text = this.generateRandomString(950);
       //change text security-hologram-text
@@ -793,9 +850,17 @@ export default defineNuxtComponent({
       //for each hoverHologram
       console.log(left, top, hoverHologram);
       hoverHologram.style.maskImage =
-        "radial-gradient(250px at " + top + " " + left + ", white, transparent)";
+        "radial-gradient(250px at " +
+        top +
+        " " +
+        left +
+        ", white, transparent)";
       hoverHologram2.style.maskImage =
-        "radial-gradient(250px at " + top + " " + left + ", white, transparent)";
+        "radial-gradient(250px at " +
+        top +
+        " " +
+        left +
+        ", white, transparent)";
       //change security hologram text
       let text = this.generateRandomString(950);
       //change text security-hologram-text
@@ -808,11 +873,17 @@ export default defineNuxtComponent({
     });
 
     //text reveal animation
-    const textRevealContainer = document.querySelector(".text-reveal-container");
-    const textRevealSafeContainer = document.querySelector(".text-reveal-safe-container");
+    const textRevealContainer = document.querySelector(
+      ".text-reveal-container"
+    );
+    const textRevealSafeContainer = document.querySelector(
+      ".text-reveal-safe-container"
+    );
     //add same width to text-reveal-safe-container than text-reveal-container
-    textRevealSafeContainer.style.width = textRevealContainer.offsetWidth + "px";
-    textRevealSafeContainer.style.height = textRevealContainer.offsetHeight + "px";
+    textRevealSafeContainer.style.width =
+      textRevealContainer.offsetWidth + "px";
+    textRevealSafeContainer.style.height =
+      textRevealContainer.offsetHeight + "px";
 
     const textReveal = document.querySelector(".text-reveal");
     textRevealContainer.addEventListener("mousemove", (e) => {
@@ -850,7 +921,7 @@ export default defineNuxtComponent({
         if (element) {
           nuxt.scrollTo({
             top: element.offsetTop - 100,
-            behavior: "instant"
+            behavior: "instant",
           });
           /*element.scrollIntoView({
                         behavior: 'smooth',
@@ -860,7 +931,7 @@ export default defineNuxtComponent({
       } else {
         nuxt.scrollTo({
           top: 0,
-          behavior: "instant"
+          behavior: "instant",
         });
       }
     },
@@ -893,23 +964,26 @@ export default defineNuxtComponent({
       }
     },
     generateRandomString(length) {
-      const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+      const characters =
+        "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
       let result = "";
       for (let i = 0; i < length; i++) {
-        result += characters.charAt(Math.floor(Math.random() * characters.length));
+        result += characters.charAt(
+          Math.floor(Math.random() * characters.length)
+        );
       }
       return result;
     },
     reset() {
       this.generated = false;
       this.$refs.transcriptorbot.start();
-    }
+    },
   },
   watch: {
     $route(to, from) {
       this.goToSection();
-    }
-  }
+    },
+  },
 });
 </script>
 
@@ -933,7 +1007,8 @@ export default defineNuxtComponent({
 .paralax .asr {
   transition: transform 1s;
   box-shadow: calc(var(--x, 0) / 2.1) calc(var(--y, 0) / 2.1) 124px #51a7ee43,
-    calc(var(--x, 0) / 2.1) calc(var(--y, 0) / 2.1) 28px #51a7ee3b, 0 0 1px #51a7ee5b;
+    calc(var(--x, 0) / 2.1) calc(var(--y, 0) / 2.1) 28px #51a7ee3b,
+    0 0 1px #51a7ee5b;
 }
 /* Old code 
 .paralax .asr {
