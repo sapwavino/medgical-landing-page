@@ -1,7 +1,7 @@
 <template>
   <div class="container flex gap-10">
     <div class="flex flex-col items-start gap-5 max-w-4xl mx-auto px-5">
-      <h2 class="text-3xl font-semibold dark:text-white/90">
+      <h2 class="text-3xl font-semibold ">
         {{ $t("faq.title") }}
       </h2>
       <div class="flex flex-col gap-0 card items-stretch nopadding">

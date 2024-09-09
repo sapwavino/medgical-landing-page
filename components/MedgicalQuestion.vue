@@ -1,10 +1,10 @@
 <template>
-    <div class="flex flex-col w-full group py-5 cursor-default px-5 bg-white dark:bg-zinc-600/50" :class="{
+    <div class="flex flex-col w-full group py-5 cursor-default px-5 bg-white /50" :class="{
         'border-b border-white/10': showBottomBorder
     }">
-        <span class="text-base relative pr-5 font-medium cursor-pointer transition-all dark:text-white/80 group-hover:text-medgicalBlue group-hover:underline dark:group-hover:text-gray-200/50"
+        <span class="text-base relative pr-5 font-medium cursor-pointer transition-all  group-hover:text-medgicalBlue group-hover:underline "
             :class="{
-                'dark:text-white/90 text-medgicalBlue underline': isOpen,
+                ' text-medgicalBlue underline': isOpen,
             }" @click="isOpen = !isOpen">
             {{ question }}
         
@@ -16,9 +16,9 @@
                 height: isOpen ? `${this.$refs.paragraph.scrollHeight}px` : '0px'
             }">
             <ul v-if="typeof answer === 'object'" ref="paragraph">
-                <li  class="text-sm dark:text-white/70 pb-2.5 pt-3" v-for="(item, index) in answer" :key="index">{{ item }}</li>
+                <li  class="text-sm  pb-2.5 pt-3" v-for="(item, index) in answer" :key="index">{{ item }}</li>
             </ul>
-            <p ref="paragraph" class="text-sm dark:text-white/70 pb-2.5 pt-3" v-else>{{ answer }}</p>
+            <p ref="paragraph" class="text-sm  pb-2.5 pt-3" v-else>{{ answer }}</p>
         </div>
     </div>
 </template>

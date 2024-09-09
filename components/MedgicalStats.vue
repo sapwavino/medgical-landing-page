@@ -1,14 +1,14 @@
 <template>
   <div class="container mb-40 ubuntu-regular">
     <div
-      class="md:flex grid grid-cols-2 gap-10 justify-center mb-14 text-center text-medgicalBlue dark:text-gray-100"
+      class="md:flex grid grid-cols-2 gap-10 justify-center mb-14 text-center text-medgicalBlue "
     >
       <div>
         <div
           class="flex items-center justify-center mb-2 gap-4 text-3xl font-medium"
         >
           <svg
-            class="h-8 w-8 fill-medgicalBlue dark:fill-none"
+            class="h-8 w-8 fill-medgicalBlue "
             xmlns="http://www.w3.org/2000/svg"
             width="24"
             height="24"
@@ -72,7 +72,7 @@
     </div>
 
     <div
-      class="text-sm dark:text-white/40 text-center max-w-xl mx-auto px-7 md:px-0"
+      class="text-sm  text-center max-w-xl mx-auto px-7 md:px-0"
     >
       {{ $t("stats.footnote") }}
     </div>

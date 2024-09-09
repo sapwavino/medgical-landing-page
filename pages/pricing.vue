@@ -1,12 +1,12 @@
 <template>
-  <div class="dark:gradient-wrapper overflow-hidden relative">
+  <div class="overflow-hidden relative">
     <MedgicalHeader />
     <div class="sparks-background opacity-90" style="z-index: 0"></div>
     <div class="section-pricing relative">
       <div class="mt-52 mb-32">
         <div class="mx-auto w-full max-w-xs md:max-w-2xl flex flex-col mb-10">
           <h2
-            class="font-book font-styling font-display mb-2 text-center text-[2.5rem] md:text-[3rem] tracking-tight leading-[120%] dark:font-gradient text-medgicalBlue dark:text-white"
+            class="font-book font-styling font-display mb-2 text-center text-[2.5rem] md:text-[3rem] tracking-tight leading-[120%]  text-medgicalBlue "
             style="
               transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1)
                 rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
@@ -24,14 +24,14 @@
         </div>
 
         <div
-          class="grid mx-auto w-full grid-cols-1 md:grid-cols-2 max-w-4xl items-center px-8 gap-8 md:gap-1 dark:md:gap-0"
+          class="grid mx-auto w-full grid-cols-1 md:grid-cols-2 max-w-4xl items-center px-8 gap-8 md:gap-1 "
         >
           <div
-            class="rounded-2xl dark:md:rounded-r-none max-w-md mx-auto p-10 ring-4 dark:ring-2 ring-[#CDEAC0] dark:ring-[#CDEAC0]/90 dark:bg-zinc-800"
+            class="rounded-2xl  max-w-md mx-auto p-10 ring-4  ring-[#CDEAC0] "
           >
             <h3
               id="tier-hobby"
-              class="dark:text-[#CDEAC0] leading-7 font-semibold text-base text-green-600"
+              class="leading-7 font-semibold text-base text-green-600"
             >
               {{ $t("pricing.medical_license") }}
             </h3>
@@ -124,7 +124,7 @@
             </button>
           </div>
           <div
-            class="p-10 max-w-md mx-auto ring-4 dark:ring-1 ring-[#FF6B6B]  dark:ring-white/10 dark:bg-zinc-800 rounded-2xl relative shadow-lg"
+            class="p-10 max-w-md mx-auto ring-4  ring-[#FF6B6B]   rounded-2xl relative shadow-lg"
           >
             <h3
               id="tier-enterprise"
@@ -137,7 +137,7 @@
                 {{ $t("pricing.hospital_license_price") }}
               </span>
             </p>
-            <p class="leading-7 dark:text-white/70 mt-6 font-medium">
+            <p class="leading-7  mt-6 font-medium">
               {{ $t("pricing.hospital_license_description1") }}<br />
               {{ $t("pricing.hospital_license_description2") }}
             </p>

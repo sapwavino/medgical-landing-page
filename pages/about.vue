@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="dark:gradient-wrapper min-h-screen overflow-hidden relative">
+        <div class=" min-h-screen overflow-hidden relative">
             <div class="sparks-background pointer-events-none opacity-90"
                 style="z-index:0"></div>
             <MedgicalHeader />
@@ -8,14 +8,14 @@
             <div class="section-aboutus z-10 relative container">
                 <div class="mb-32 mt-52">
                     <div class="mx-auto w-full max-w-2xl flex flex-col mb-10">
-                        <h2 class="font-book font-styling font-display mb-2 text-center text-[2.5rem] md:text-[3rem] tracking-tight leading-[120%] dark:font-gradient "
+                        <h2 class="font-book font-styling font-display mb-2 text-center text-[2.5rem] md:text-[3rem] tracking-tight leading-[120%] capitalize ubuntu-medium"
                             style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); opacity: 1; transform-style: preserve-3d;">
                             It's medgical! ✨
                         </h2>
                     </div>
                 </div>
                 <p
-                    class="font-sans text-lg dark:text-white/60 text-left font-medium w-full max-w-xl mx-auto mb-20 px-10">
+                    class="font-sans text-lg  text-left font-medium w-full max-w-xl mx-auto mb-20 px-10">
                     <span
                         class=" float-left leading-10 text-6xl pt-1.5 pr-2.5">
                         {{ $t('about.letter') }}
@@ -27,7 +27,7 @@
             <div class="section-team">
                 <div class=" mb-40 md:mt-64">
                     <div class="mx-auto w-full max-w-2xl flex flex-col mb-10">
-                        <h2 class="font-book font-styling font-display mb-2 text-center text-[2.5rem] md:text-[3rem] tracking-tight leading-[120%] dark:font-gradient ubuntu-medium capitalize"
+                        <h2 class="font-book font-styling font-display mb-2 text-center text-[2.5rem] md:text-[3rem] tracking-tight leading-[120%]  ubuntu-medium capitalize"
                             style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); opacity: 1; transform-style: preserve-3d;">
                             {{ $t('about.team_title') }}
                         </h2>
