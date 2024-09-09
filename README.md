@@ -4,12 +4,10 @@
 
 ### CHANGES
 
-
 ![Dark theme 1](https://i.postimg.cc/d3Qmm04m/Medgical.jpg)
 ![Dark theme 2](https://i.postimg.cc/VNMRzpJM/Medgical-1-24pm-09-09-1.jpg)
 ![Light theme 1](https://i.postimg.cc/QtJJT7kd/Medgical-1-23pm-09-09.jpg)
 ![Light theme 2](https://i.postimg.cc/Tw6c10bs/Medgical-1-24pm-09-09.jpg)
-
 
 - Redesigned pages with a light theme using brand colors while retaining most of the original design scheme
 - Added dark and light themes with System-dependent theme switcher
